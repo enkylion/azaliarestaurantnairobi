@@ -47,46 +47,22 @@
   </section>
 
   <section id="order">
-  <h2>Order Food</h2>
-  <form id="order-form">
-    <label for="item">Select Item:</label>
-    <select id="item" name="item">
-      <option value="bhajia">Bhajia - 100 kes</option>
-      <option value="biriani">Biriani - 200 kes</option>
-      <option value="chips_chicken">Chips + Chicken(1/4) - 350 kes</option>
-      <option value="chapati">Chapati (each) - 20 kes</option>
-      <option value="deep_fry_fish">Deep Fry/ Wet Fry fish - 300 kes</option>
-      <option value="mandazi_plain">Mandazi Plain (each) - 20 kes</option>
-      <option value="matoke_beef">Matoke + Beef - 150 kes</option>
-      <option value="matoke_matumbo">Matoke + Matumbo - 200 kes</option>
-      <option value="mukimo">Mukimo - 100 kes</option>
-      <option value="mukimo_beef">Mukimo + Beef - 200 kes</option>
-      <option value="mukimo_plain">Mukimo Plain - 100 kes</option>
-      <option value="omena">Omena - 100 kes</option>
-      <option value="pancake">Pancake (each) - 20 kes</option>
-      <option value="pilau_beef1">Pilau + Beef - 250 kes</option>
-      <option value="pilau_beef2">Pilau + Beef - 250 kes</option>
-      <option value="rice_beans">Rice + Beans - 150 kes</option>
-      <option value="rice_beef">Rice + Beef - 150 kes</option>
-      <option value="rice_chicken">Rice + Chicken - 320 kes</option>
-      <option value="rice_ndengu">Rice + Ndengu - 150 kes</option>
-      <option value="tea">Tea - 50 kes</option>
-      <option value="ugali_beef_greens">Ugali + Beef/ Greens - 120 kes</option>
-      <option value="ugali_matumbo">Ugali + Matumbo - 150 kes</option>
-      <!-- Add more options for other menu items -->
-    </select>
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-    <button type="submit">Place Order</button>
-  </form>
-</section>
-
+    <h2>Order Food</h2>
+    <form id="order-form">
+      <label for="item">Select Item:</label>
+      <select id="item" name="item">
+        <option value="bhajia">Bhajia - 100 kes</option>
+        <!-- Add more options for other menu items -->
+      </select>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
 
   <section id="login">
     <h2>Login</h2>
-    <!-- Login form -->
     <form id="login-form">
-      <!-- Input fields for username and password -->
       <input type="text" id="username" name="username" placeholder="Username" required>
       <input type="password" id="password" name="password" placeholder="Password" required>
       <button type="submit">Login</button>
@@ -95,9 +71,7 @@
 
   <section id="signup">
     <h2>Sign Up</h2>
-    <!-- Signup form -->
     <form id="signup-form">
-      <!-- Input fields for username, email, and password -->
       <input type="text" id="signup-username" name="username" placeholder="Username" required>
       <input type="email" id="signup-email" name="email" placeholder="Email" required>
       <input type="password" id="signup-password" name="password" placeholder="Password" required>
@@ -117,30 +91,5 @@
   <footer>
     <!-- Footer content -->
   </footer>
-
-```html
-<script>
-document.getElementById("order-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the form from submitting normally
-
-  // Get the selected item, quantity, and price from the form
-  var item = document.getElementById("item").options[document.getElementById("item").selectedIndex].value;
-  var quantity = parseInt(document.getElementById("quantity").value);
-  var price = document.getElementById("item").options[document.getElementById("item").selectedIndex].text.split(" - ")[1];
-
-  // Validate inputs
-  if (quantity <= 0 || isNaN(quantity)) {
-    alert("Please enter a valid quantity.");
-    return;
-  }
-
-  // Process the order
-  alert("Order Details:\n\nItem: " + item + "\nPrice per Item: " + price + "\nQuantity: " + quantity + "\nTotal Price: " + (parseInt(price) * quantity) + " kes");
-
-  // Reset the form after submission
-  event.target.reset();
-});
-</script>
-```
 </body>
 </html>
