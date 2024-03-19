@@ -5,31 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Restaurant Management System</title>
 <style>
-  /* Your CSS styles here */
+  /* CSS styles for header, footer, and other sections */
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Additional CSS styling for other sections can be added here */
 </style>
 </head>
 <body>
   <header>
     <h1>Welcome to Bella's Restaurant Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
   </header>
-  
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#order">Order</a></li>
-      <li><a href="#login">Login</a></li>
-    </ul>
-  </nav>
-  
+
   <section id="about">
-    <!-- About section content -->
+    <h2>About Us</h2>
+    <p>Welcome to Bella's Restaurant, where we serve delicious food made with love!</p>
+    <img src="Bella's.png" alt="Bella's Restaurant">
   </section>
-  
+
   <section id="menu">
-    <!-- Menu section content -->
+    <h2>Menu</h2>
+    <img src="Bellas Menu.jpg" alt="Menu Item 1">
   </section>
-  
+
   <section id="order">
     <h2>Order Food</h2>
     <form id="order-form">
@@ -45,7 +61,7 @@
       <button type="submit">Place Order</button>
     </form>
   </section>
-  
+
   <section id="login">
     <h2>Login</h2>
     <!-- Login form -->
@@ -56,7 +72,7 @@
       <button type="submit">Login</button>
     </form>
   </section>
-  
+
   <section id="signup">
     <h2>Sign Up</h2>
     <!-- Signup form -->
@@ -69,41 +85,9 @@
     </form>
   </section>
 
-  <!-- Your subscription section remains unchanged -->
-
   <footer>
     <!-- Footer content -->
   </footer>
-
-  <!-- JavaScript code -->
-  <script>
-    document.getElementById("order-form").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
-
-      // Get the selected item and quantity from the form
-      var item = document.getElementById("item").value;
-      var quantity = parseInt(document.getElementById("quantity").value);
-
-      // Validate inputs
-      if (quantity <= 0 || isNaN(quantity)) {
-        alert("Please enter a valid quantity.");
-        return;
-      }
-
-      // Process the order (send email, store in database, etc.)
-      sendEmail(item, quantity);
-
-      // Reset the form after submission
-      event.target.reset();
-    });
-
-    function sendEmail(item, quantity) {
-      // Your code to send an email with order details
-      // This would typically be done on the server side using a server-side language like PHP
-      // Here's a basic example using JavaScript to simulate sending an email (not recommended for production)
-      var message = "Thank you for your order!\n\nItem: " + item + "\nQuantity: " + quantity;
-      alert("Email sent with order details:\n\n" + message);
-    }
-  </script>
 </body>
 </html>
+
