@@ -117,11 +117,6 @@
   <footer>
     <!-- Footer content -->
   </footer>
-  Your code structure looks good, and the script for handling the order form submission is correctly placed at the end of the HTML body. It's set up to prevent the default form submission behavior, extract the selected item, quantity, and price, perform validation, display an alert with the order details, and reset the form after submission.
-
-However, there's a small issue with the script. Since you have duplicate IDs for some options in the select element (e.g., `pilau_beef1` and `pilau_beef2`), using `document.getElementById("item").value` to get the selected item won't work correctly. Instead, you can directly get the selected option's value using `document.getElementById("item").options[document.getElementById("item").selectedIndex].value`.
-
-Here's the corrected script part:
 
 ```html
 <script>
@@ -147,8 +142,5 @@ document.getElementById("order-form").addEventListener("submit", function(event)
 });
 </script>
 ```
-
-With this correction, your order form should work as expected.
-
 </body>
 </html>
