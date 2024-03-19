@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Management System</title>
+<style>
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Additional CSS styling for other sections can be added here */
+</style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Bella's Restaurant Management System</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#orders">Orders</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+  </nav>
+  
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Bella's Restaurant, where we serve delicious food made with love!</p>
+    <img src="Bella's.png" alt="Bella's Restaurant">
+  </section>
+  
+  <section id="menu">
+    <h2>Menu</h2>
+    <img src="Bellas Menu.jpg" alt="Menu Item 1">
+  </section>
+  
+  <section id="order">
+    <h2>Order Food</h2>
+    <div id="login-form">
+      <h3>Login</h3>
+      <!-- Login form -->
+      <form id="login-form">
+        <!-- Input fields for username and password -->
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div id="signup-form">
+      <h3>Sign Up</h3>
+      <!-- Sign-up form -->
+      <form id="signup-form">
+        <!-- Input fields for username, email, and password -->
+        <input type="text" id="signup-username" name="username" placeholder="Username" required>
+        <input type="email" id="signup-email" name="email" placeholder="Email" required>
+        <input type="password" id="signup-password" name="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </section>
+  <section id="subscription">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Stay updated with the latest news, offers, and events from Bella's Restaurant by subscribing to our newsletter.</p>
+    <form id="subscription-form">
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+  
